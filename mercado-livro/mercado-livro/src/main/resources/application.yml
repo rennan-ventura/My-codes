@@ -8,3 +8,8 @@ spring:
     password: rennan007
   jackson:
     default-property-inclusion: non_null
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
