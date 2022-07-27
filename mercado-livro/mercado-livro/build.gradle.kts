@@ -6,6 +6,7 @@ plugins {
 	kotlin("jvm") version "1.6.10"
 	kotlin("plugin.spring") version "1.6.10"
 	kotlin("plugin.jpa") version "1.6.10"
+	jacoco
 }
 
 group = "com.mercadolivro"
@@ -26,6 +27,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.flywaydb:flyway-core:7.7.0")
 	implementation("io.jsonwebtoken:jjwt:0.9.1")
+	implementation("io.mockk:mockk:1.12.4")
 
 	implementation("io.springfox:springfox-swagger2:3.0.0")
 	implementation("io.springfox:springfox-swagger-ui:3.0.0")
