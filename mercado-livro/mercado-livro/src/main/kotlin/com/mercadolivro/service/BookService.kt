@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class BookService(
-    val bookRepository: BookRepository
+    private val bookRepository: BookRepository
 ) {
     fun create(book: BookModel) {
         bookRepository.save(book)
@@ -51,6 +51,7 @@ class BookService(
     }
 
     fun findAllByIds(bookIds: Set<Int>): List<BookModel> {
+        //tenta colocar o erro aqui após cria-lo
         return bookRepository.findAllById(bookIds).toList()
     }
 
