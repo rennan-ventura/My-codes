@@ -13,7 +13,7 @@ fun buildCustomer(
     name: String = "customer name",
     email: String = "${UUID.randomUUID()}@email.com",
     password: String = "password"
-) = CustomerModel(
+) = CustomerModel (
     id = id,
     name = name,
     email = email,
@@ -26,7 +26,7 @@ fun buildPurchase(
     id: Int? = null,
     customer: CustomerModel = buildCustomer(),
     books: MutableList<BookModel> = mutableListOf(),
-    nfe: String = UUID.randomUUID().toString(),
+    nfe: String? = UUID.randomUUID().toString(),
     price: BigDecimal = BigDecimal.TEN
 ) = PurchaseModel (
     id = id,
